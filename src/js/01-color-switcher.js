@@ -13,12 +13,12 @@ const bodyColor =document.querySelector('body');
 stopBtn.disabled = true;
 startBtn.style.background ='#50db2a';
 
-startBtn.addEventListener('click',startBtnClick)
-stopBtn.addEventListener('click',stopBtnClick)
+startBtn.addEventListener('click',startBtnClick);
+stopBtn.addEventListener('click',stopBtnClick);
 
 const changeColor=()=>bodyColor.style.backgroundColor = getRandomHexColor();
 
-let intarvalId;
+let intervalId = null;
 
 function startBtnClick(){
     intarvalId=setInterval(changeColor, 1000)
@@ -46,17 +46,3 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
-  await fetch('https://localhost:44385/api/PushNotification', {
-    method: 'POST',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin' ,
-
-    headers: {
-        'content-type': 'application/json'
-    },
-    body: JSON.stringify(data)
-
-}).catch(function (erro) {
-    console.log(erro);
-});
