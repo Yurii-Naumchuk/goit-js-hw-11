@@ -46,3 +46,17 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   };
 
+  await fetch('https://localhost:44385/api/PushNotification', {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin' ,
+
+    headers: {
+        'content-type': 'application/json'
+    },
+    body: JSON.stringify(data)
+
+}).catch(function (erro) {
+    console.log(erro);
+});
