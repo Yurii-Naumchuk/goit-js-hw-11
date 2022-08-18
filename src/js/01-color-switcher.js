@@ -18,7 +18,7 @@ stopBtn.addEventListener('click',stopBtnClick);
 
 const changeColor=()=>bodyColor.style.backgroundColor = getRandomHexColor();
 
-let intervalId = null;
+let intarvalId;
 
 function startBtnClick(){
     intarvalId=setInterval(changeColor, 1000)
