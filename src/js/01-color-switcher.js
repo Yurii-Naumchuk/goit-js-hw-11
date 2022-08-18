@@ -11,7 +11,7 @@ const stopBtn = document.querySelector('[data-stop]');
 const bodyColor =document.querySelector('body');
 
 stopBtn.disabled = true;
-// startBtn.style.background ='#50db2a';
+startBtn.style.background ='#50db2a';
 
 startBtn.addEventListener('click',startBtnClick)
 stopBtn.addEventListener('click',stopBtnClick)
