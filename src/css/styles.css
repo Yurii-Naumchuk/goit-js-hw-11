@@ -33,60 +33,85 @@ body {
   padding: 30px;
 }
 
-.country-list {
-  padding: 0;
-}
-
-.country-info{
-  width: 400px;
-  padding: 15px;
-  background: rgb(145, 185, 214);
-  border: 2px solid #3f28c3;
-  border-radius: 10px;
-  }
-
-.country-info span {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 700;
-  margin-right: 10px;
-  color: #212121;
-}
-
-.country-info p {
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 500;
-  margin-right: 10px;
-  color: #212121;
-}
-
-.country {
+.search-form {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  font-size: 18px;
+}
+
+.search-box {
+  font-size: 28px;
+  max-width: 300px;
+  border: 0;
+  border-radius: 4px;
   text-align: center;
-  margin: 20px;
+  background: -webkit-linear-gradient(90deg,#0462ac,#3880ac,#54bcdc);
+  display: table;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+  margin: 10px;
+  padding: 10px 20px;
 }
 
-.country__flag{
-  width: 50px;
-  margin-right: 10px;
+::-webkit-input-placeholder {
+  color: white;
 }
 
-.country-list__item {
-  display: flex;
-  max-width: 400px;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 10px;
-  border: 2px solid #3f28c3;
+.button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(90deg,#d8ffa8,#cdff8f,#bfff70);
+  display: table;
+  color: #3880ac;
+  font-size: 28px;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+  margin: 10px;
+  cursor: pointer;
+}
+
+.gallery {
+  margin-top: 40px;
+  gap: 20px 20px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto auto auto;
+}
+
+.photo-card {
+  min-width: 300px;
+  max-width: 450px;
+  border: 1px solid white;
+  background: -webkit-linear-gradient(90deg,#edefee,#c9c9c9);
   border-radius: 10px;
-  margin: 5px;
-  }
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
+}
 
-.country-list__item img {
-  margin-right: 10px;
+.photo-card img {
+  width: 300px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-item {
+font-size: 16px;
+margin: 5px;
+}
+
+.info-item b {
+  margin-right: 5px;
+}
+
+.hide {
+  display: none;
 }
