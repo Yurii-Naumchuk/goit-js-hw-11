@@ -4,33 +4,21 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
-}
-
-
-#search-box {
-  font: inherit;
-  font-size: 36px;
-  max-width: 400px;
-  text-align: center;
-  background: #5d9fea72;
-
-  color: rgb(37, 17, 17);
-  border-radius: 5px;
-  margin-bottom: 20px;
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(201, 221, 221);
+    color: #212121;
+    line-height: 1.5;
 }
 
 .container {
-  background: #5d9fea72;
+  background: -webkit-linear-gradient(90deg,#e8e7cb,#8fe0c9,#56cce1a9);
   color: #212121;
-  height: 100vh;
+  box-shadow: 0px 5px 10px 10px rgba(34, 60, 80, 0.2) inset;
   margin: 0;
   padding: 30px;
+  min-height: 100vh;
 }
 
 .search-form {
@@ -40,12 +28,12 @@ body {
 }
 
 .search-box {
-  font-size: 28px;
+  font-size: 26px;
   max-width: 300px;
   border: 0;
   border-radius: 4px;
   text-align: center;
-  background: -webkit-linear-gradient(90deg,#0462ac,#3880ac,#54bcdc);
+  background: -webkit-linear-gradient(90deg,#788a99,#cdd2d4,#54bcdc5f);
   display: table;
   color: white;
   border-radius: 5px;
@@ -63,9 +51,9 @@ body {
   padding: 10px 20px;
   border: 0;
   border-radius: 4px;
-  background: -webkit-linear-gradient(90deg,#d8ffa8,#cdff8f,#bfff70);
+  background: -webkit-linear-gradient(90deg,#3a4281,#595d85,#7091ff);
   display: table;
-  color: #3880ac;
+  color: #39cf91d8;
   font-size: 28px;
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
   margin: 10px;
@@ -74,10 +62,11 @@ body {
 
 .gallery {
   margin-top: 40px;
-  gap: 20px 20px;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo-card {
@@ -87,13 +76,16 @@ body {
   background: -webkit-linear-gradient(90deg,#edefee,#c9c9c9);
   border-radius: 10px;
   padding: 10px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: 5px 5px 13px 0px rgba(34, 60, 80, 0.6);
 }
 
 .photo-card img {
+  border-radius: 10px;
   width: 300px;
 }
 
@@ -115,3 +107,13 @@ margin: 5px;
 .hide {
   display: none;
 }
+
+.wrapper-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-btn .button {
+  width: 310px;
+}
+

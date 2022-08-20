@@ -40,14 +40,13 @@ async function convertFetchResults (searchQuery, currentPage) {
     try {
         const fetchResult = await fetchPictures(searchQuery, currentPage);  
         if (currentPage === 1) {
-            Notify.info(`Hooray! We found ${fetchResult.totaImages} images.`);
+            Notify.info(`Hooray! We found ${fetchResult.totalHits} images.`);
         }
         filterFetchResult(fetchResult);
     } catch (error) {console.log(error)}
 }
-
 function filterFetchResult(fetchResult) {
-    if (currentPage === Math.ceil(fetchResult.totaImages / 40)) {
+    if (currentPage === Math.ceil(fetchResult.totalHits / 40)) {
         insertcreatePictureCard(fetchResult.hits);  
         refs.btnLoadMoreEl.classList.add('hide');
         Notify.info("We're sorry, but you've reached the end of search results.");
@@ -66,7 +65,6 @@ function filterFetchResult(fetchResult) {
         return;
     }
 }
-
 function clearGalleryList () {
     refs.galleryEl.innerHTML = "";
 }
